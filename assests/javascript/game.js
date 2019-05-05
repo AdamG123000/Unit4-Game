@@ -37,7 +37,7 @@ var beginGame = function(){
             "background-image":"url('" + images[i] + "')",
             "background-size":"cover"
         })
-        crystal.html(random);
+        // crystal.html(random);
         $(".crystals").append(crystal);
     } 
     $("#previous").html("Total Score: " + previous);
@@ -48,7 +48,7 @@ $(document).on('click', ".crystal", function(){
     console.log($(this).attr('data-random'));
     
     var num = parseInt($(this).attr('data-random'));
-    var result = num + 5; 
+    // var result = num + 5; 
     // console.log(num, ' + ', result); 
 
     previous += num;
@@ -56,7 +56,7 @@ $(document).on('click', ".crystal", function(){
     $("#previous").html("Total Score: " + previous);  
     console.log(previous);
     if(previous > random_result){
-        loss--;
+        loss++;
         $("#loss").html("You lost: " + loss);
         console.log("you lose");
         previous = 0;
